@@ -20,6 +20,11 @@ import java.sql.ResultSetMetaData;
 @Controller
 public class MysqlController {
 
+    /**
+     *  第一次git测试
+     * @param tableName
+     * @return
+     */
     @RequestMapping("/getInfo")
     @ResponseBody
     public JSONArray getInfo(@RequestParam("tableName") String tableName ){
