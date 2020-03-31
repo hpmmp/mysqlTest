@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 配置数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssm_chongqing?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 指定javaBean生成的位置 -->
+        <javaModelGenerator targetPackage="com.cqut.crud.bean"
+                            targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--指定sql映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="mapper"  targetProject=".\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 指定dao接口生成的位置，mapper接口 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.cqut.crud.dao"
+                             targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- table指定每个表的生成策略 -->
+      <!-- <table tableName="student" domainObjectName="Student"></table>
+        <table tableName="admin" domainObjectName="Admin"></table>
+        <table tableName="family_member" domainObjectName="FamilyMember"></table>
+        <table tableName="funding_info" domainObjectName="FundingInfo"></table>
+        <table tableName="school" domainObjectName="School"></table>
+        <table tableName="student_status" domainObjectName="StudentStatus"></table>
+
+        <table tableName="bankcard_change_record" domainObjectName="BankcardChangeRecord"></table>
+        <table tableName="funded_project" domainObjectName="FundedProject"></table>
+        <table tableName="project_type" domainObjectName="ProjectType"></table>
+        <table tableName="student_bankcard" domainObjectName="StudentBankcard"></table>
+        <table tableName="student_history_info" domainObjectName="StudentHistoryInfo"></table>
+        <table tableName="student_poverty_type" domainObjectName="StudentPovertyType"></table>
+        <table tableName="funded_project" domainObjectName="FundedProject"></table>-->
+       <!-- <table tableName="project_student" domainObjectName="ProjectStudent"></table>-->
+       <!--<table tableName="student_bankcard" domainObjectName="StudentBankcard"></table>-->
+        <table tableName="bankcard_change_record" domainObjectName="BankcardChangeRecord"></table>
+    </context>
+</generatorConfiguration>

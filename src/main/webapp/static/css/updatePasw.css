@@ -1,0 +1,54 @@
+.box {
+	max-width: 45%;
+	height: 80%;
+	background: whitesmoke;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0 0 100px #333333;
+	z-index: 99;
+	border-radius: 4px;
+}
+.box-th {
+	width: 70%;
+	margin-top: 4%;
+	margin-left: 15%;
+	height: 40px;
+	background: #e3e8ee;
+	float: left;
+}
+
+.box-th p {
+	width: 25%;
+	height: 100%;
+	color: cornflowerblue;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+}
+
+.box-th input {
+	border: none;
+	width: 75%;
+	height: 100%;
+	outline: none;
+	float: left;
+	text-align: center;
+	background: white;
+	float: left;
+}
+.submit {
+	width: 70%;
+	height: 40px;
+	margin-top: 30px;
+	margin-left: 15%;
+	border: none;
+	background: rgb(220, 140, 151);
+	margin-top: 20px;
+	color: white;
+}
